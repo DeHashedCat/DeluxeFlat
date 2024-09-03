@@ -990,7 +990,7 @@ blockquote p {
 }
 
 .qa-a-count {
-	background-color: transparent;
+	background-color: #121212;
 	color: #fff;
 	text-align: center;
 	border-radius: 8px;
@@ -1961,12 +1961,19 @@ input[type="submit"], button {
 	display: flex;
 }
 
+.qa-template-user .qa-form-tall-buttons, td.qa-form-tall-buttons {
+	float: right;
+}
+
 .qa-form-wide-buttons input {
 	margin-right: .5rem;
 }
 
+h3.badge-title {
+	background-color: #181818;
+}
+
 .qa-form-tall-buttons .qa-form-tall-button-post, input.qa-form-tall-button.qa-form-tall-button-send {
-	float: right;
 	border: 1px solid #3d3d3d;
 	width: 3.9rem;
 	height: 1.7rem;
@@ -2033,7 +2040,7 @@ input.qa-form-wide-button.qa-form-wide-button-delete {
 	background: url(images/icons/delete-user.png) no-repeat 1rem 0;
 }
 
-tr#duration, tr#level, tr#permits, tr#email, tr#lastlogin, tr#lastwrite, tr#userfield-4, tr#userfield-5, tr#userfield-6 {
+tr#duration, tr#level, tr#permits, tr#email, tr#lastlogin, tr#lastwrite, tr#userfield-1, tr#userfield-2, tr#userfield-3, tr#userfield-4, tr#userfield-5, tr#userfield-6, tr#userfield-7, tr#userfield-8, tr#userfield-9, tr#userfield-10 {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -2645,6 +2652,12 @@ span.qa-q-view-avatar a img, img.qa-avatar-image {
 	background: #000 !important;
 }
 
+input#q_doanswer {
+	font-size: 14px;
+	text-indent: 16px;
+	line-height: 0px;
+}
+
 /*------[ c-list ]------*/
 .qa-q-view-c-list, .qa-a-item-c-list {
 	margin-top: 20px;
@@ -2655,8 +2668,8 @@ span.qa-q-view-avatar a img, img.qa-avatar-image {
 	position: relative;
 	margin-bottom: 5px;
 	padding: 10px;
-	background-color: transparent;
-	border-top: 1px solid #2d2d2d;
+	background-color: #181818;
+	border-top: 1px solid #181818;
 }
 
 .qa-a-list-item-selected .qa-c-list-item {
