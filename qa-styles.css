@@ -891,6 +891,15 @@ blockquote p {
 	word-wrap: break-word;
 }
 
+.qa-q-item-content td,
+.qa-a-item-content td,
+.qa-c-item-content td {
+	padding: .5rem;
+	font-style: italic;
+	border: 1px solid #303030;
+	color: #c8c8c8;
+}
+
 .qa-q-view-content table, .qa-a-item-content table, .qa-c-item-content table {
 	width: 100%;
 	border-collapse: collapse;
@@ -1738,9 +1747,6 @@ span.qa-top-users-label {
 
 /*------[ forms ]------*/
 
-.cke_dialog_ui_input_text input[type="text"] {
-	color: #000;
-}
 
 input, textarea, select {
 	margin-top: 5px;
