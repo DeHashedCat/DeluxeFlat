@@ -161,11 +161,11 @@ h2 {
 	color: #fff;
 	padding: 5px 10px !important;
 	clear: both;
-	background: #101010;
+	background: #121212;
 	font-family: Arial,Helvetica,sans-serif;
 	font-weight: 700;
 	border-radius: 10px;
-	box-shadow: 0 -25px 35px -25px #069 inset;
+	box-shadow: 0 -25px 10px -25px #069 inset;
 }
 
 h3 {
@@ -912,7 +912,7 @@ blockquote p {
 .qa-q-view-content th, .qa-a-item-content th, .qa-c-item-content th,
 .qa-q-view-content td, .qa-a-item-content td, .qa-c-item-content td {
 	padding: 10px;
-	border: 1px solid #e0e0e0;
+	border: 1px solid #303030;
 	text-align: left;
 }
 .qa-q-view-content th, .qa-a-item-content th, .qa-c-item-content th {
@@ -2511,7 +2511,6 @@ span.qa-q-view-avatar a img, img.qa-avatar-image {
 	background: transparent;
 	position: relative;
 	min-height: 190px;
-	border-bottom: 1px solid #4d4d4d;
 }
 /* highlight selected answer */
 .qa-a-list-item:target{
