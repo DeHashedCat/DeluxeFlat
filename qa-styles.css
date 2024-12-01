@@ -8,6 +8,11 @@
 	Theme License: CC0-1.0
 */
 
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 .clearfix, .qa-q-item-clear,
 .qa-nav-main-list, .qa-nav-sub,
@@ -67,11 +72,11 @@ html {
 	font-style: italic;
 }
 
-* {
+/** {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
+}*/
 
 html, body {
 	margin: 0;
@@ -2087,7 +2092,7 @@ tr > td.badge-user-table {
 	border-radius: 4px;
 	margin-left: 1rem;
 }
-#level .qa-form-wide-static a:hover:first-child, #level .qa-form-wide-static a:focus:first-child {;
+#level .qa-form-wide-static a:hover:first-child, #level .qa-form-wide-static a:focus:first-child {
 	border: 1px solid #fff;
 	color: #fff;
 	text-decoration: none;
