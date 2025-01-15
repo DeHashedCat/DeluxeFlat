@@ -81,6 +81,8 @@ html {
 html, body {
 	margin: 0;
 	padding: 0;
+
+	overflow-x: hidden;
 }
 
 body {
@@ -894,6 +896,7 @@ blockquote p {
 .qa-a-item-content,
 .qa-c-item-content {
 	word-wrap: break-word;
+	overflow-x: scroll;
 }
 
 .qa-q-item-content td,
@@ -911,9 +914,7 @@ blockquote p {
 	font-size: 14px;
 	margin-bottom: 20px;
 }
-.qa-q-view-content tr:hover, .qa-a-item-content tr:hover, .qa-c-item-content tr:hover {
-	background-color: #f4f4f4;
-}
+
 .qa-q-view-content th, .qa-a-item-content th, .qa-c-item-content th,
 .qa-q-view-content td, .qa-a-item-content td, .qa-c-item-content td {
 	padding: 10px;
@@ -1184,6 +1185,7 @@ blockquote p {
 
 .qa-q-item-buttons {
 	float: left;
+	display: flex;
 }
 
 input.qa-form-light-button.qa-form-light-button-reject {
@@ -1191,6 +1193,8 @@ input.qa-form-light-button.qa-form-light-button-reject {
 	padding: 16px 32px;
 	box-shadow: 0px 0px 14px 2px #AD0000;
 	transition: all ease .3s;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 input.qa-form-light-button.qa-form-light-button-reject:hover {
@@ -1200,7 +1204,7 @@ input.qa-form-light-button.qa-form-light-button-reject:hover {
 input.qa-form-light-button.qa-form-light-button-approve {
 	border: 1px solid #25A100;
 	padding: 16px 32px;
-	margin-left: 1rem;
+
 	box-shadow: 0px 0px 14px 2px #25A100;
 	transition: all ease .3s;
 }
@@ -1379,7 +1383,6 @@ li.qa-q-item-tag-item.qa-tag-favorited:before {
 .qa-page-ellipsis {
 	padding: 5px 10px;
 	margin-bottom: 5px;
-	background: #fff;
 	display: block;
 }
 
@@ -1703,12 +1706,6 @@ span.qa-top-users-label {
 	color: #c8c8c8;
 	display: inline-block;
 	font-size: 13px;
-	vertical-align: middle;
-}
-
-.qa-message-buttons {
-	display: inline-block;
-	margin-left: 12px;
 	vertical-align: middle;
 }
 
@@ -2062,6 +2059,10 @@ tr > td:first-child {
 	font-weight: bold;
 }
 
+.qa-a-list-item tr > td:first-child {
+	font-weight: normal;
+}
+
 tr > td.badge-user-table {
 	display: flex;
 }
@@ -2211,10 +2212,10 @@ tr > td.badge-user-table {
 	background-image: url('images/icons/edit-icon.png');
 }
 .qa-form-light-button-flag {
-	background-image: url('images/icons/flag-white.png');
+	background-image: url('images/icons/flag-icon.png');
 }
 .qa-form-light-button-unflag {
-	background-image: url('images/icons/flag-white.png');
+	background-image: url('images/icons/unflag-icon.png');
 }
 .qa-form-light-button-clearflags {
 	background-image: url('images/icons/unflag-icon.png');
@@ -3564,25 +3565,41 @@ form[name=admin_form] tr, form[name=points_form] tr {
 }
 
 @-webkit-keyframes answer-highlight {
-    0% { background-color: #ffffaa; }
-    100% { background-color: #fff; }
+    0% { background-color: #121212;
+		 border-radius: 8px; }
+	25% { background-color: #181818;
+		  border-radius: 8px; }
+	75% { background-color: #181818;
+		  border-radius: 8px; }
+    100% { background-color: #121212;
+		   border-radius: 8px; }
 }
 @keyframes answer-highlight {
-    0% { background-color: #ffffaa; }
-    100% { background-color: #fff; }
+    0% { background-color: #121212;
+		border-radius: 8px; }
+   25% { background-color: #181818;
+		 border-radius: 8px; }
+   75% { background-color: #181818;
+		 border-radius: 8px; }
+   100% { background-color: #121212;
+		  border-radius: 8px; }
 }
 
 @-webkit-keyframes comment-highlight {
-    0% { background-color: #ffffaa; }
-    100% { background-color: #f4f4f4; }
+    0% { background-color: #181818; }
+	25% { background-color: #242424; }
+	75% { background-color: #242424; }
+    100% { background-color: #181818; }
 }
 @keyframes comment-highlight {
-    0% { background-color: #ffffaa; }
-    100% { background-color: #f4f4f4; }
+    0% { background-color: #181818; }
+	25% { background-color: #242424; }
+	75% { background-color: #242424; }
+    100% { background-color: #181818; }
 }
 
 
-/*------[ icons ]------*/
+/*-----[ icons ]-----*/
 .qa-favorite-image:before,
 .qa-favorite-button:before,
 .qa-unfavorite-button:before,
@@ -3658,3 +3675,8 @@ form[name=admin_form] tr, form[name=points_form] tr {
 .qa-q-view-tag-item.qa-tag-favorited:before,
 .qa-q-item-tag-item.qa-tag-favorited:before,
 .icon-star:before { content: '\e827'; }
+
+.osn-bell {
+	fill: #fff;
+	margin-top: .8rem;
+}
